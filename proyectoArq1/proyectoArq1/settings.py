@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tgf0jx$36w74@eva*l=ig2jk)s6imz3cj@#6%rs%2lhznb-fw*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://similmercadofree.herokuapp.com/', '127.0.0']
+ALLOWED_HOSTS = ['https://similmercadofree.herokuapp.com/', 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -76,12 +76,7 @@ WSGI_APPLICATION = 'proyectoArq1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 
 
 # Password validation
@@ -127,3 +122,14 @@ STATIC_ROOT =  os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd37nmeva7t588e',
+        'USER': 'cgpzuenjmzontw',
+        'PASSWORD' : 'c6ef068e36b85005a2b7f6b89f3f752c6930fd4b8ca1e5631a700ce5e0537a4a',
+        'HOST': 'ec2-44-193-228-249.compute-1.amazonaws.com',
+        'PORT': 5432
+    }
+}
